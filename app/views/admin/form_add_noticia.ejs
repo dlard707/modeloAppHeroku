@@ -1,0 +1,33 @@
+<%- include('../common/header') %>
+
+	<%- include('../common/menu') %>
+
+	<main class="mb-4">
+
+		<div class="bg-light p-5 mb-4">
+			<div class="container">
+				<h1>Nova Notícia</h1>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<form action="/admin/salvar-noticia" method="POST">
+				<div class="mb-3">
+					<label for="titulo" class="form-label">Titulo</label>
+					<input type="text" id="titulo" name="titulo" class="form-control" placeholder="Título da notícia" autocomplete="off">
+				</div>
+
+				<div class="mb-3">
+					<label for="conteudo" class="form-label">Conteúdo</label>
+					<textarea name="conteudo" id="conteudo" cols="30" rows="5"  class="form-control" style="resize: none;"></textarea>
+				</div>
+
+				<input type="submit" value="Criar" class="btn btn-primary btn-lg w-100">
+			</form>
+
+		</div>
+
+	</main>
+
+<%- include('../common/footer') %>

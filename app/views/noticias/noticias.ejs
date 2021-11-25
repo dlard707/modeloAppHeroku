@@ -1,0 +1,37 @@
+<%- include('../common/header') %>
+
+	<%- include('../common/menu') %>
+
+	<main class="mb-4">
+
+		<div class="bg-light p-5 mb-4">
+			<div class="container text-center">
+				<h1>Notícias</h1>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+				<% noticias.forEach(noticia => { %>
+
+				<div class="col">
+					<div class="card shadow-sm">
+						<div class="card-body">
+							<h5 class="card-title"><%= noticia.titulo %></h5>
+							<p class="card-text"><%= noticia.conteudo.substring(0, 50) %> ...</p>
+							<p class="card-text"><small class="text-muted"><%= noticia.data_criacao.toLocaleString('pt-BR').split(' ').join(' às ') %></small></p>
+							<a href="/noticia?id=<%= noticia.id_noticia %>" class="btn btn-primary">Saiba Mais</a>
+						</div>
+					</div>
+				</div>
+
+				<% }) %>
+
+			</div>
+			
+		</div>
+	</main>
+
+<%- include('../common/footer') %>

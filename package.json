@@ -1,0 +1,22 @@
+{
+  "name": "portal_noticias",
+  "version": "1.0.0",
+  "description": "Blog Tecnologia",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Cel.lep Tech",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.12",
+    "pg": "^8.7.1"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

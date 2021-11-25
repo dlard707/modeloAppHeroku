@@ -1,0 +1,32 @@
+<header class="container-fluid bg-dark sticky-top">
+    <nav class="d-flex justify-content-between flex-column flex-sm-row flex-wrap justify-content-center align-items-center">
+        <div>
+            <img src="./img/logo_branca.svg" alt="logo">
+        </div>
+        <div>
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="/" class="nav-link text-white" id="menuHome">Home</a>
+                </li>
+                <li>
+                    <a href="/noticias" class="nav-link text-white" id="menuNoticias">Notícias</a>
+                </li>
+                <li>
+                    <a href="/admin" class="nav-link text-white" id="menuAdmin">Admin</a>
+                </li>
+                <li>
+                    <!-- link sair da sessão -->
+                    <% if (typeof(autorizado) !== 'undefined') { %>
+                    
+                    <a href="/admin/sair" class="nav-link text-white">Sair</a>
+                    
+                    <% } %>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <!-- div vazia -->
+        </div>
+    </nav>
+
+</header>

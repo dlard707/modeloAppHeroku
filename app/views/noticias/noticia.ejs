@@ -1,0 +1,25 @@
+<%- include('../common/header') %>
+
+	<%- include('../common/menu') %>
+
+	<main class="mb-4">
+
+		<div class="bg-light p-5 mb-4">
+			<div class="container text-center">
+				<h1><%= noticia.titulo %></h1>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-12 col-sm-10 col-md-8">
+					<p><small><%= noticia.data_criacao.toLocaleString('pt-BR').split(' ').join(' às ') %></small></p>
+					<hr>
+					<p><%= noticia.conteudo %></p>
+				</div>
+			</div>
+		</div>
+		
+	</main>
+
+<%- include('../common/footer') %>
